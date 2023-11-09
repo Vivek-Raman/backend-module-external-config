@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource(value = "classpath:" + Constants.MODULE_NAME + ".properties")
 public class ExternalConfigConfig {
   @Bean
   public GroupedOpenApi externalConfigApiGroup() {
