@@ -73,5 +73,9 @@
       <groupId>dev.vivekraman</groupId>
       <artifactId>monolith-model</artifactId>
     </dependency>
+    <dependency>
+      <groupId>dev.vivekraman</groupId>
+      <artifactId>monolith-base</artifactId>
+    </dependency>
   </dependencies>
 </project>
