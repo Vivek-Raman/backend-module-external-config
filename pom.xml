@@ -20,7 +20,7 @@
 	</modules>
 	<properties>
 		<java.version>17</java.version>
-		<monolith-common.version>1.1-rc1</monolith-common.version>
+		<monolith-common.version>1.2-rc2</monolith-common.version>
 		<springdoc.version>2.1.0</springdoc.version>
 	</properties>
 	<dependencies>
