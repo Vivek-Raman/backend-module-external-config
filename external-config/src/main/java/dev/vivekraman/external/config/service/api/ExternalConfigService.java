@@ -9,5 +9,5 @@ public interface ExternalConfigService {
    * @param key to be queried
    * @return externalConfig with matching key
    */
-  Mono<ExternalConfig> findByKey(String key);
+  Mono<ExternalConfig> findByConfigKey(String key);
 }

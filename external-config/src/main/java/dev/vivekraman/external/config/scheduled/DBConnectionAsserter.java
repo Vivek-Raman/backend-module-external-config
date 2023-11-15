@@ -27,7 +27,7 @@ public class DBConnectionAsserter implements InitializingBean {
     assertDBConnection();
   }
 
-  @Scheduled(fixedDelay = 1L, timeUnit = TimeUnit.DAYS)
+  @Scheduled(fixedDelay = 6L, timeUnit = TimeUnit.HOURS)
   public void heartbeat() throws Exception {
     assertDBConnection();
   }
@@ -36,7 +36,7 @@ public class DBConnectionAsserter implements InitializingBean {
     Throwable exception = null;
     for (int i = 0; i < MAX_RETRIES; i++) {
       try {
-        ExternalConfig doc = externalConfigRepository.findByKey(KEY).block();
+        ExternalConfig doc = externalConfigRepository.findByConfigKey(KEY).block();
         log.info("DB connection established, Successfully fetched document {}", doc);
         return;
       } catch (BadSqlGrammarException e) {

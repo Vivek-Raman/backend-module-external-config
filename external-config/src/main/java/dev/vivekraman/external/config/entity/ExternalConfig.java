@@ -26,7 +26,7 @@ public class ExternalConfig implements Serializable {
   @Id
   private String id;
 
-  private String key;
+  private String configKey;
   private String value;
   private String notes;
 }

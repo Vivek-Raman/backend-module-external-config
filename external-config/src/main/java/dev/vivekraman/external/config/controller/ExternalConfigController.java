@@ -19,7 +19,7 @@ public class ExternalConfigController {
 
   @GetMapping("/{key}")
   public Mono<Response<ExternalConfig>> fetchExternalConfigByKey(@PathVariable String key) {
-    return externalConfigService.findByKey(key)
+    return externalConfigService.findByConfigKey(key)
         .map(Response::of)
         .defaultIfEmpty(new Response<>())
         .subscribeOn(scheduler);

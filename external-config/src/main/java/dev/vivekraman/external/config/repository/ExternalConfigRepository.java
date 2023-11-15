@@ -7,5 +7,5 @@ import reactor.core.publisher.Mono;
 
 @Repository
 public interface ExternalConfigRepository extends ReactiveCrudRepository<ExternalConfig, String> {
-  Mono<ExternalConfig> findByKey(String key);
+  Mono<ExternalConfig> findByConfigKey(String key);
 }

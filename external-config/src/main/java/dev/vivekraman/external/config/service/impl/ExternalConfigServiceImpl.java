@@ -16,11 +16,11 @@ public class ExternalConfigServiceImpl implements ExternalConfigService {
   private final ExternalConfigRepository externalConfigRepository;
 
   @Override
-  public Mono<ExternalConfig> findByKey(String key) {
+  public Mono<ExternalConfig> findByConfigKey(String key) {
     if (StringUtils.isBlank(key)) {
       return Mono.empty();
     }
 
-    return externalConfigRepository.findByKey(key);
+    return externalConfigRepository.findByConfigKey(key);
   }
 }
